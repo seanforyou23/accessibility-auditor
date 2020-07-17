@@ -1,0 +1,2052 @@
+[
+  {
+    "page": "https://www.patternfly.org/v4/documentation/react/components/table",
+    "violations": [
+      {
+        "description": "Ensures every id attribute value of active elements is unique",
+        "help": "IDs of active elements must be unique",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/duplicate-id-active?application=webdriverjs",
+        "id": "duplicate-id-active",
+        "impact": "serious",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "pf-toggle-id-3",
+                "id": "duplicate-id-active",
+                "impact": "serious",
+                "message": "Document has active elements with the same id attribute: pf-toggle-id-3",
+                "relatedNodes": [
+                  {
+                    "html": "<button aria-label=\"Actions\" id=\"pf-toggle-id-3\" class=\"pf-c-dropdown__toggle pf-m-plain\" type=\"button\" aria-expanded=\"false\" aria-haspopup=\"true\">",
+                    "target": [
+                      "div[data-ouia-component-id=\"\\31 1527\"] > .pf-c-dropdown__toggle[aria-label=\"Actions\"][aria-haspopup=\"true\"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has active elements with the same id attribute: pf-toggle-id-3",
+            "html": "<button id=\"pf-toggle-id-3\" class=\"pf-c-dropdown__toggle\" type=\"button\" aria-expanded=\"false\" aria-haspopup=\"true\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".ws-org-context-switcher-dropdown > .pf-c-dropdown__toggle[aria-haspopup=\"true\"][type=\"button\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.parsing",
+          "wcag2a",
+          "wcag411"
+        ]
+      },
+      {
+        "description": "Ensures every id attribute value used in ARIA and in labels is unique",
+        "help": "IDs used in ARIA and labels must be unique",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/duplicate-id-aria?application=webdriverjs",
+        "id": "duplicate-id-aria",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "simple-node0",
+                "id": "duplicate-id-aria",
+                "impact": "critical",
+                "message": "Document has multiple elements referenced with ARIA with the same id attribute: simple-node0",
+                "relatedNodes": [
+                  {
+                    "html": "<div id=\"simple-node0\">one</div>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1520\"] > th[data-label=\"Repositories\"] > div"
+                    ]
+                  },
+                  {
+                    "html": "<div id=\"simple-node0\">one</div>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1526\"] > th[data-label=\"Repositories\"] > div"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: simple-node0",
+            "html": "<div id=\"simple-node0\">one</div>",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "tr[data-ouia-component-id=\"\\31 1517\"] > th[data-label=\"Repositories\"] > div"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "simple-node1",
+                "id": "duplicate-id-aria",
+                "impact": "critical",
+                "message": "Document has multiple elements referenced with ARIA with the same id attribute: simple-node1",
+                "relatedNodes": [
+                  {
+                    "html": "<div id=\"simple-node1\">a</div>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1522\"] > th[data-label=\"Repositories\"] > div"
+                    ]
+                  },
+                  {
+                    "html": "<div id=\"simple-node1\">a</div>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1528\"] > th[data-label=\"Repositories\"] > div"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: simple-node1",
+            "html": "<div id=\"simple-node1\">a</div>",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "tr[data-ouia-component-id=\"\\31 1518\"] > th[data-label=\"Repositories\"] > div"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "simple-node2",
+                "id": "duplicate-id-aria",
+                "impact": "critical",
+                "message": "Document has multiple elements referenced with ARIA with the same id attribute: simple-node2",
+                "relatedNodes": [
+                  {
+                    "html": "<div id=\"simple-node2\">p</div>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1524\"] > th[data-label=\"Repositories\"] > div"
+                    ]
+                  },
+                  {
+                    "html": "<div id=\"simple-node2\">p</div>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1529\"] > th[data-label=\"Repositories\"] > div"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: simple-node2",
+            "html": "<div id=\"simple-node2\">p</div>",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "tr[data-ouia-component-id=\"\\31 1519\"] > th[data-label=\"Repositories\"] > div"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "expandable-toggle1",
+                "id": "duplicate-id-aria",
+                "impact": "critical",
+                "message": "Document has multiple elements referenced with ARIA with the same id attribute: expandable-toggle1",
+                "relatedNodes": [
+                  {
+                    "html": "<button aria-labelledby=\"simple-node1 expandable-toggle1\" id=\"expandable-toggle1\" aria-expanded=\"true\" aria-disabled=\"false\" aria-label=\"Details\" class=\"pf-c-button pf-m-plain pf-m-expanded\" type=\"button\" data-ouia-component-type=\"PF4/Button\" data-ouia-safe=\"true\" data-ouia-component-id=\"11557\">",
+                    "target": [
+                      "button[data-ouia-component-id=\"\\31 1557\"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: expandable-toggle1",
+            "html": "<button aria-labelledby=\"simple-node1 expandable-toggle1\" id=\"expandable-toggle1\" aria-expanded=\"true\" aria-disabled=\"false\" aria-label=\"Details\" class=\"pf-c-button pf-m-plain pf-m-expanded\" type=\"button\" data-ouia-component-type=\"PF4/Button\" data-ouia-safe=\"true\" data-ouia-component-id=\"11542\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "button[data-ouia-component-id=\"\\31 1542\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "expandable-toggle3",
+                "id": "duplicate-id-aria",
+                "impact": "critical",
+                "message": "Document has multiple elements referenced with ARIA with the same id attribute: expandable-toggle3",
+                "relatedNodes": [
+                  {
+                    "html": "<button aria-labelledby=\"simple-node3 expandable-toggle3\" id=\"expandable-toggle3\" aria-expanded=\"false\" aria-disabled=\"false\" aria-label=\"Details\" class=\"pf-c-button pf-m-plain\" type=\"button\" data-ouia-component-type=\"PF4/Button\" data-ouia-safe=\"true\" data-ouia-component-id=\"11560\">",
+                    "target": [
+                      "button[data-ouia-component-id=\"\\31 1560\"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: expandable-toggle3",
+            "html": "<button aria-labelledby=\"simple-node3 expandable-toggle3\" id=\"expandable-toggle3\" aria-expanded=\"false\" aria-disabled=\"false\" aria-label=\"Details\" class=\"pf-c-button pf-m-plain\" type=\"button\" data-ouia-component-type=\"PF4/Button\" data-ouia-safe=\"true\" data-ouia-component-id=\"11545\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "button[data-ouia-component-id=\"\\31 1545\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "expandable-toggle5",
+                "id": "duplicate-id-aria",
+                "impact": "critical",
+                "message": "Document has multiple elements referenced with ARIA with the same id attribute: expandable-toggle5",
+                "relatedNodes": [
+                  {
+                    "html": "<button aria-labelledby=\"simple-node5 expandable-toggle5\" id=\"expandable-toggle5\" aria-expanded=\"false\" aria-disabled=\"false\" aria-label=\"Details\" class=\"pf-c-button pf-m-plain\" type=\"button\" data-ouia-component-type=\"PF4/Button\" data-ouia-safe=\"true\" data-ouia-component-id=\"11563\">",
+                    "target": [
+                      "button[data-ouia-component-id=\"\\31 1563\"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple elements referenced with ARIA with the same id attribute: expandable-toggle5",
+            "html": "<button aria-labelledby=\"simple-node5 expandable-toggle5\" id=\"expandable-toggle5\" aria-expanded=\"false\" aria-disabled=\"false\" aria-label=\"Details\" class=\"pf-c-button pf-m-plain\" type=\"button\" data-ouia-component-type=\"PF4/Button\" data-ouia-safe=\"true\" data-ouia-component-id=\"11548\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              "button[data-ouia-component-id=\"\\31 1548\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.parsing",
+          "wcag2a",
+          "wcag411"
+        ]
+      },
+      {
+        "description": "Ensures every id attribute value is unique",
+        "help": "id attribute value must be unique",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/duplicate-id?application=webdriverjs",
+        "id": "duplicate-id",
+        "impact": "minor",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "pf-toggle-id-2",
+                "id": "duplicate-id",
+                "impact": "minor",
+                "message": "Document has multiple static elements with the same id attribute",
+                "relatedNodes": [
+                  {
+                    "html": "<button aria-label=\"Actions\" id=\"pf-toggle-id-2\" class=\"pf-c-dropdown__toggle pf-m-plain\" type=\"button\" aria-expanded=\"false\" aria-haspopup=\"true\" disabled=\"\">",
+                    "target": [
+                      "div[data-ouia-component-id=\"\\31 1525\"] > .pf-c-dropdown__toggle[aria-label=\"Actions\"][aria-haspopup=\"true\"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+            "html": "<button id=\"pf-toggle-id-2\" class=\"pf-c-dropdown__toggle ws-org-version-toggle\" type=\"button\" aria-expanded=\"false\" aria-haspopup=\"true\">",
+            "impact": "minor",
+            "none": [],
+            "target": [
+              ".ws-org-version-toggle"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "expanded-content2",
+                "id": "duplicate-id",
+                "impact": "minor",
+                "message": "Document has multiple static elements with the same id attribute",
+                "relatedNodes": [
+                  {
+                    "html": "<td data-key=\"1\" id=\"expanded-content2\" class=\"\" colspan=\"6\"><div class=\"pf-c-table__expandable-row-content\">child - 1</div></td>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1558\"] > td[colspan=\"\\36 \"][data-key=\"\\31 \"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+            "html": "<td data-key=\"1\" id=\"expanded-content2\" class=\"\" colspan=\"5\"><div class=\"pf-c-table__expandable-row-content\">child - 1</div></td>",
+            "impact": "minor",
+            "none": [],
+            "target": [
+              "tr[data-ouia-component-id=\"\\31 1543\"] > td[colspan=\"\\35 \"][data-key=\"\\31 \"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "expanded-content4",
+                "id": "duplicate-id",
+                "impact": "minor",
+                "message": "Document has multiple static elements with the same id attribute",
+                "relatedNodes": [
+                  {
+                    "html": "<td data-key=\"1\" id=\"expanded-content4\" class=\"\" colspan=\"5\"><div class=\"pf-c-table__expandable-row-content\">child - 2</div></td>",
+                    "target": [
+                      "tr[data-ouia-component-id=\"\\31 1561\"] > td[colspan=\"\\35 \"][data-key=\"\\31 \"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+            "html": "<td data-key=\"1\" id=\"expanded-content4\" class=\"\" colspan=\"4\"><div class=\"pf-c-table__expandable-row-content\">child - 2</div></td>",
+            "impact": "minor",
+            "none": [],
+            "target": [
+              "td[colspan=\"\\34 \"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": "expanded-content6",
+                "id": "duplicate-id",
+                "impact": "minor",
+                "message": "Document has multiple static elements with the same id attribute",
+                "relatedNodes": [
+                  {
+                    "html": "<td data-key=\"1\" id=\"expanded-content6\" class=\"pf-m-no-padding\" colspan=\"6\"><div class=\"pf-c-table__expandable-row-content\">child - 3</div></td>",
+                    "target": [
+                      ".pf-m-no-padding[colspan=\"\\36 \"][data-key=\"\\31 \"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+            "html": "<td data-key=\"1\" id=\"expanded-content6\" class=\"pf-m-no-padding\" colspan=\"5\"><div class=\"pf-c-table__expandable-row-content\">child - 3</div></td>",
+            "impact": "minor",
+            "none": [],
+            "target": [
+              ".pf-m-no-padding[colspan=\"\\35 \"][data-key=\"\\31 \"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.parsing",
+          "wcag2a",
+          "wcag411"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "https://forum.patternfly.org/",
+    "violations": [
+      {
+        "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+        "help": "Elements must have sufficient color contrast",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/color-contrast?application=webdriverjs",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#0088cc",
+                  "contrastRatio": 3.89,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#ffffff",
+                  "fontSize": "9.8pt (13.059px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.89 (foreground color: #ffffff, background color: #0088cc, font size: 9.8pt (13.059px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<button class=\"widget-button btn btn-primary btn-small sign-up-button btn-text\"><span class=\"d-button-label\">Sign Up</span></button>",
+                    "target": [
+                      ".sign-up-button"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #ffffff, background color: #0088cc, font size: 9.8pt (13.059px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"d-button-label\">Sign Up</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".sign-up-button > .d-button-label"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#0088cc",
+                  "contrastRatio": 3.89,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#ffffff",
+                  "fontSize": "9.8pt (13.059px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.89 (foreground color: #ffffff, background color: #0088cc, font size: 9.8pt (13.059px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<button class=\"widget-button btn btn-primary btn-small login-button btn-icon-text\"><svg class=\"fa d-icon d-icon-user svg-icon svg-node\" aria-hidden=\"true\"><use xlink:href=\"#user\"></use></svg><span class=\"d-button-label\">Log In</span></button>",
+                    "target": [
+                      ".login-button"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #ffffff, background color: #0088cc, font size: 9.8pt (13.059px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"d-button-label\">Log In</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".login-button > .d-button-label"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#d1f0ff",
+                  "contrastRatio": 3.26,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#0088cc",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.26 (foreground color: #0088cc, background color: #d1f0ff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<div id=\"banner\">",
+                    "target": [
+                      "#banner"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.26 (foreground color: #0088cc, background color: #d1f0ff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<a href=\"https://forum.patternfly.org/faq\">Forum FAQs</a>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "ol > li:nth-child(1) > a"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#d1f0ff",
+                  "contrastRatio": 3.26,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#0088cc",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.26 (foreground color: #0088cc, background color: #d1f0ff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<div id=\"banner\">",
+                    "target": [
+                      "#banner"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.26 (foreground color: #0088cc, background color: #d1f0ff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<a href=\"https://forum.patternfly.org/c/support\">Support section</a>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "ol > li:nth-child(2) > a"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#d1f0ff",
+                  "contrastRatio": 3.26,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#0088cc",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.26 (foreground color: #0088cc, background color: #d1f0ff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<div id=\"banner\">",
+                    "target": [
+                      "#banner"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.26 (foreground color: #0088cc, background color: #d1f0ff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<a href=\"https://forum.patternfly.org/c/uncategorized\">introduce yourself</a>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "ol > li:nth-child(3) > a"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#e45735",
+                  "contrastRatio": 3.67,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#ffffff",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #e45735, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<a href=\"/latest\" class=\"active\">Latest</a>",
+                    "target": [
+                      "a[href$=\"latest\"]"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #e45735, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<a href=\"/latest\" class=\"active\">Latest</a>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "a[href$=\"latest\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<th data-sort-order=\"default\" class=\"default\">Topic</th>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".default"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<th data-sort-order=\"posts\" class=\"posts sortable num\">Replies</th>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "th[data-sort-order=\"posts\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<th data-sort-order=\"activity\" class=\"activity sortable num\">Activity</th>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "th[data-sort-order=\"activity\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.89,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#0088cc",
+                  "fontSize": "11.3pt (15.0009px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.89 (foreground color: #0088cc, background color: #ffffff, font size: 11.3pt (15.0009px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #0088cc, background color: #ffffff, font size: 11.3pt (15.0009px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<a href=\"/t/welcome-to-the-patternfly-forum/8\">read more</a>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "#ember41 > .main-link.clearfix[colspan=\"\\31 \"] > .topic-excerpt > a"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date with-year\" data-time=\"1538581085636\" data-format=\"tiny\">Oct '18</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 538581085636\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.89,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#0088cc",
+                  "fontSize": "11.3pt (15.0009px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.89 (foreground color: #0088cc, background color: #ffffff, font size: 11.3pt (15.0009px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #0088cc, background color: #ffffff, font size: 11.3pt (15.0009px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<a href=\"/t/welcome-to-patternfly/77\">read more</a>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".topic-excerpt > a[href=\"\\/t\\/welcome-to-patternfly\\/77\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date with-year\" data-time=\"1536932806181\" data-format=\"tiny\">Sep '18</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 536932806181\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1594210385594\" data-format=\"tiny\">8d</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 594210385594\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1594043488825\" data-format=\"tiny\">10d</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 594043488825\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1592814779848\" data-format=\"tiny\">25d</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 592814779848\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1592470634739\" data-format=\"tiny\">29d</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 592470634739\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1591030643438\" data-format=\"tiny\">Jun 1</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 591030643438\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1591022560049\" data-format=\"tiny\">Jun 1</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 591022560049\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1587912589240\" data-format=\"tiny\">Apr 26</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 587912589240\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1587228878946\" data-format=\"tiny\">Apr 18</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 587228878946\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1587052474001\" data-format=\"tiny\">Apr 16</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 587052474001\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1586872524697\" data-format=\"tiny\">Apr 14</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 586872524697\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1586405878558\" data-format=\"tiny\">Apr 9</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 586405878558\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1585218613395\" data-format=\"tiny\">Mar 26</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 585218613395\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1584926178571\" data-format=\"tiny\">Mar 22</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 584926178571\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1583510030152\" data-format=\"tiny\">Mar 6</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 583510030152\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1583184155630\" data-format=\"tiny\">Mar 2</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 583184155630\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1582122952251\" data-format=\"tiny\">Feb 19</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 582122952251\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1582062107438\" data-format=\"tiny\">Feb 18</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 582062107438\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1581700254520\" data-format=\"tiny\">Feb 14</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 581700254520\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "bold"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"number\">14</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "td[title=\"This\\ topic\\ has\\ 14\\ replies\"] > .badge-posts.posts-map[href=\"\"] > .number"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 1.87,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#bdbdbd",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 1.87 (foreground color: #bdbdbd, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.87 (foreground color: #bdbdbd, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1580751706963\" data-format=\"tiny\">Feb 3</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 580751706963\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1578606727191\" data-format=\"tiny\">Jan 9</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 578606727191\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1578600617970\" data-format=\"tiny\">Jan 9</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 578600617970\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1578326438469\" data-format=\"tiny\">Jan 6</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 578326438469\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date\" data-time=\"1578060684811\" data-format=\"tiny\">Jan 3</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 578060684811\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date with-year\" data-time=\"1575649583146\" data-format=\"tiny\">Dec '19</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 575649583146\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date with-year\" data-time=\"1574761304376\" data-format=\"tiny\">Nov '19</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 574761304376\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date with-year\" data-time=\"1574445488808\" data-format=\"tiny\">Nov '19</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 574445488808\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date with-year\" data-time=\"1572967084228\" data-format=\"tiny\">Nov '19</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 572967084228\"]"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.15,
+                  "expectedContrastRatio": "4.5:1",
+                  "fgColor": "#919191",
+                  "fontSize": "11.3pt (15px)",
+                  "fontWeight": "normal"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "relatedNodes": [
+                  {
+                    "html": "<html lang=\"en-US\" class=\"desktop-view not-mobile-device text-size-normal anon no-touch discourse-no-touch\">",
+                    "target": [
+                      "html"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.15 (foreground color: #919191, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "html": "<span class=\"relative-date with-year\" data-time=\"1572437711869\" data-format=\"tiny\">Oct '19</span>",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "span[data-time=\"\\31 572437711869\"]"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143"
+        ]
+      },
+      {
+        "description": "Ensures <li> elements are used semantically",
+        "help": "<li> elements must be contained in a <ul> or <ol>",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/listitem?application=webdriverjs",
+        "id": "listitem",
+        "impact": "serious",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "messageKey": "roleNotValid"
+                },
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element without a role, or a role=\"list\"",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element without a role, or a role=\"list\"",
+            "html": "<li class=\"header-dropdown-toggle\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".header-dropdown-toggle:nth-child(1)"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "messageKey": "roleNotValid"
+                },
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element without a role, or a role=\"list\"",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element without a role, or a role=\"list\"",
+            "html": "<li class=\"header-dropdown-toggle\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".header-dropdown-toggle:nth-child(2)"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.structure",
+          "wcag2a",
+          "wcag131"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "https://medium.com/patternfly",
+    "violations": [
+      {
+        "description": "Ensures every HTML document has a lang attribute",
+        "help": "<html> element must have a lang attribute",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/html-has-lang?application=webdriverjs",
+        "id": "html-has-lang",
+        "impact": "serious",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "messageKey": "noLang"
+                },
+                "id": "has-lang",
+                "impact": "serious",
+                "message": "The <html> element does not have a lang attribute",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+            "html": "<html xmlns:cc=\"http://creativecommons.org/ns#\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "html"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.language",
+          "wcag2a",
+          "wcag311"
+        ]
+      },
+      {
+        "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+        "help": "Images must have alternate text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/image-alt?application=webdriverjs",
+        "id": "image-alt",
+        "impact": "critical",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "has-alt",
+                "impact": "critical",
+                "message": "Element does not have an alt attribute",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-label",
+                "impact": "serious",
+                "message": "aria-label attribute does not exist or is empty",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "aria-labelledby",
+                "impact": "serious",
+                "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "non-empty-title",
+                "impact": "serious",
+                "message": "Element has no title attribute or the title attribute is empty",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "role-presentation",
+                "impact": "minor",
+                "message": "Element's default semantics were not overridden with role=\"presentation\"",
+                "relatedNodes": []
+              },
+              {
+                "data": null,
+                "id": "role-none",
+                "impact": "minor",
+                "message": "Element's default semantics were not overridden with role=\"none\"",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute or the title attribute is empty\n  Element's default semantics were not overridden with role=\"presentation\"\n  Element's default semantics were not overridden with role=\"none\"",
+            "html": "<img class=\"collectionHeader-logoImage js-collectionHeaderLogoImage\" src=\"https://cdn-images-1.medium.com/max/280/1*xrfJNkLhoxYKmCLdrzMUKg@2x.png\" data-image-id=\"1*xrfJNkLhoxYKmCLdrzMUKg@2x.png\" data-width=\"400\" data-height=\"400\">",
+            "impact": "critical",
+            "none": [],
+            "target": [
+              ".collectionHeader-logoImage"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a"
+        ]
+      },
+      {
+        "description": "Ensures <li> elements are used semantically",
+        "help": "<li> elements must be contained in a <ul> or <ol>",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.5/listitem?application=webdriverjs",
+        "id": "listitem",
+        "impact": "serious",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element",
+            "html": "<li class=\"collectionHeader-navItem js-collectionNavItem u-inlineBlock u-fontSize13 u-textUppercase u-letterSpacing1px u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "li:nth-child(1)"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element",
+            "html": "<li class=\"collectionHeader-navItem js-collectionNavItem u-inlineBlock u-fontSize13 u-textUppercase u-letterSpacing1px u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "li:nth-child(2)"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element",
+            "html": "<li class=\"collectionHeader-navItem js-collectionNavItem u-inlineBlock u-fontSize13 u-textUppercase u-letterSpacing1px u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "li:nth-child(3)"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element",
+            "html": "<li class=\"collectionHeader-navItem js-collectionNavItem u-inlineBlock u-fontSize13 u-textUppercase u-letterSpacing1px u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "li:nth-child(4)"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element",
+            "html": "<li class=\"collectionHeader-navItem js-collectionNavItem u-inlineBlock u-fontSize13 u-textUppercase u-letterSpacing1px u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              "li:nth-child(5)"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": null,
+                "id": "listitem",
+                "impact": "serious",
+                "message": "List item does not have a <ul>, <ol> parent element",
+                "relatedNodes": []
+              }
+            ],
+            "failureSummary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element",
+            "html": "<li class=\"collectionHeader-navItem js-collectionNavItem u-inlineBlock u-fontSize13 u-textUppercase u-letterSpacing1px u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 is-external\">",
+            "impact": "serious",
+            "none": [],
+            "target": [
+              ".is-external"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.structure",
+          "wcag2a",
+          "wcag131"
+        ]
+      }
+    ]
+  }
+]
