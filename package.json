@@ -4,6 +4,9 @@
   "description": "Tools for analyzing the accessibility of a web pages.",
   "main": "index.js",
   "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "start": "lerna run start:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,10 +38,10 @@
   "private": true,
   "workspaces": [
     "modules/*"
- ],
- "engines": {
-  "node": ">=8.9.0",
-  "npm": ">=5.5.1",
-  "yarn": ">=1.6.0"
-}
+  ],
+  "engines": {
+    "node": ">=8.9.0",
+    "npm": ">=5.5.1",
+    "yarn": ">=1.6.0"
+  }
 }
