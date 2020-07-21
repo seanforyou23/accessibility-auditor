@@ -7,6 +7,8 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "start": "lerna run start:dev",
+    "auditA11y": "lerna run auditA11y",
+    "genSitemap": "lerna run genSitemap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,13 +30,6 @@
     "url": "https://github.com/seanforyou23/accessibility-auditor/issues"
   },
   "homepage": "https://github.com/seanforyou23/accessibility-auditor#readme",
-  "devDependencies": {
-    "axe-core": "^3.5.5",
-    "axe-webdriverjs": "^2.3.0",
-    "axios": "^0.19.2",
-    "lerna": "^3.5.1",
-    "selenium-webdriver": "^4.0.0-alpha.7"
-  },
   "private": true,
   "workspaces": [
     "modules/*"

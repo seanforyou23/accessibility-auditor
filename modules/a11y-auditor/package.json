@@ -1,11 +1,23 @@
 {
   "name": "@seanforyou23/a11y-auditor",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Michael Spaxman <seanforyou23@gmail.com>",
+  "description": "Tools for analyzing the accessibility of a web pages.",
+  "author": "Michael Spaxman",
   "homepage": "https://github.com/seanforyou23/accessibility-auditor/tree/master/modules/a11y-auditor#readme",
   "license": "MIT",
-  "main": "lib/a11y-auditor.js",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "axe-core": "^3.5.5",
+    "axe-webdriverjs": "^2.3.0",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "crawler": "^1.2.2",
+    "lerna": "^3.5.1",
+    "puppeteer": "^5.2.0",
+    "request": "^2.88.2",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "spa-crawler": "^2.0.2"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,7 +30,9 @@
     "url": "git+https://github.com/seanforyou23/accessibility-auditor.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "genSitemap": "node ./lib/generateSitemap.js",
+    "auditA11y": "node ./lib/index.js"
   },
   "bugs": {
     "url": "https://github.com/seanforyou23/accessibility-auditor/issues"
