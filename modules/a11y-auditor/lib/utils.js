@@ -6,7 +6,5 @@ module.exports = {
     let t = '';
     for (e = 0; e < n.length; e++) t += String.fromCharCode(parseInt(n[e], 16));
     return t;
-  },
-  filterNamedAnchors: href => href.indexOf('#') === -1,
-  filterExternalUrls: href => !href.path.indexOf(baseUrl)
+  }
 };
