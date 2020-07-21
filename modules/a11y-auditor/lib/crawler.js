@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
-let topLevelPages = [];
 const baseUrl = 'https://www.draftcab.io';
 
 (async () => {
+  let topLevelPages = [];
+  let pagesToAudit = [];
   const browser = await puppeteer.launch({ headless: false, slowMo: 250 });
   let page = await browser.newPage();
   async function getPage(url) {
@@ -26,7 +27,7 @@ const baseUrl = 'https://www.draftcab.io';
 
   const hrefs = await getPageLinks(page);
 
-  console.log('allLinks: ', hrefs);
+  // console.log('allLinks: ', hrefs);
 
   const curPageSitemap = hrefs
     .filter(href => href.indexOf('#') === -1) // skip over in-page links (named anchors)
@@ -37,7 +38,7 @@ const baseUrl = 'https://www.draftcab.io';
 
   topLevelPages = topLevelPages.concat(curPageSitemap);
 
-  console.log('topLevelPages: ', topLevelPages);
+  // console.log('topLevelPages: ', topLevelPages);
 
   const localPages = topLevelPages
     .filter(page => !page.path.indexOf(baseUrl)) // don't test links that are to external sites
@@ -45,19 +46,32 @@ const baseUrl = 'https://www.draftcab.io';
 
   console.log('localPages: ', localPages);
 
-  localPages
-    .reduce(async (prevPromise, nextPage) => prevPromise.then(() => {
-      // console.log('nextPage', nextPage);
-      return getPage(nextPage.path);
-    }), Promise.resolve())
-    .then(async (page) => {
-      // console.log('page: ', page);
-      const newHrefs = await getPageLinks(page);
-      console.log('newHrefs: ', newHrefs);
-    })
-    .catch((error) => {
-      console.log('there was an error?');
-    });
 
-  // await browser.close();
+
+  const answer = localPages.reduce((prevPromise, nextPage) => {
+    return prevPromise.then(() => {
+      // get page and gather links
+      return 'foo';
+    });
+  }, Promise.resolve());
+
+  answer.then((result) => {
+    console.log(result);
+  });
+
+  // localPages
+  //   .reduce(async (prevPromise, nextPage) => prevPromise.then(() => {
+  //     // console.log('nextPage', nextPage);
+  //     return getPage(nextPage.path);
+  //   }), Promise.resolve())
+  //   .then(async (result) => {
+  //     console.log('result: ', result);
+  //     // const newHrefs = await getPageLinks(page);
+  //     // console.log('newHrefs: ', newHrefs);
+  //   })
+  //   .catch((error) => {
+  //     console.log('there was an error?');
+  //   });
+
+  await browser.close();
 })();
