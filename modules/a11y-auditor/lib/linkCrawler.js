@@ -1,7 +1,18 @@
 const fs = require('fs');
 const path = require('path');
+const { Command } = require('commander');
 const puppeteer = require('puppeteer');
-const baseUrl = 'https://www.patternfly.org/v4';
+const program = new Command();
+let baseUrl;
+program
+  .version(require('../package.json').version)
+  .option('-l, --log', 'instructs the script to log info to the console')
+  .option('-d, --debug', 'runs puppeteer in headful mode and slows down the script for debugging purposes')
+  .requiredOption('-u, --url', 'sets the base domain to crawl from')
+  .action((cmd, options) => {
+    baseUrl = options[0];
+  });
+program.parse(process.argv);
 const convertToAuditorFormat = (listOfLinks) => listOfLinks.map(href => {
   return {
     path: href,
@@ -9,9 +20,7 @@ const convertToAuditorFormat = (listOfLinks) => listOfLinks.map(href => {
   }
 });
 const filterNamedAnchors = href => {
-  if (typeof href === 'object') {
-    return false;
-  }
+  if (typeof href === 'object') { return false; }
   return href.indexOf('#') === -1;
 };
 const filterExternalUrls = href => !href.indexOf(baseUrl);
@@ -19,11 +28,13 @@ let linksAlreadyCrawled = []; // keep track of the links we've already crawled
 let linksIdentified = []; // keep track of every link we come across, for comparison purposes
 let linksLeftToCrawl = []; // keep a counter of what remains to be crawled
 (async () => {
-  const browser = await puppeteer.launch({ headless: false, slowMo: 1000 });
+  const browser = await puppeteer.launch(program.debug ? { headless: false, slowMo: 250 } : { headless: true });
   const extractLinks = async (url) => {
+
     const page = await browser.newPage(); // fire up a new browser tab
+    await page.setViewport({ width: 768, height: 1024 });
     await page.goto(url); // navigate to the page
-    console.log('Scraping: ', url, `-- uptime: ${Math.floor(process.uptime())} seconds`);
+    program.log && console.log('Scraping: ', url, `-- uptime: ${Math.floor(process.uptime())} seconds`);
     const linksOnPage = await page.$$eval('a', anchorElements => anchorElements.map(a => a.href)); // all links, including ones we don't want
     const filteredLinksOnPage = linksOnPage
       .filter(filterNamedAnchors)
@@ -33,10 +44,9 @@ let linksLeftToCrawl = []; // keep a counter of what remains to be crawled
 
     linksAlreadyCrawled.push(url); // register this page as one we've crawled
     linksIdentified.push(...filteredLinksOnPage); // register all links on this page
-
-    // go fetch the next page
     linksLeftToCrawl = linksIdentified.filter(link => !linksAlreadyCrawled.includes(link));
-    console.log(`${linksLeftToCrawl.length} pages left to crawl`);
+
+    program.log && console.log(`${linksLeftToCrawl.length} pages left to crawl`);
     // what is the next url?
     const nextPage = linksLeftToCrawl[0];
     // if there's a next page, re-call this function recursively with the nextPage url, otherwise return the final list
@@ -48,7 +58,7 @@ let linksLeftToCrawl = []; // keep a counter of what remains to be crawled
   const linkSet = new Set(allLinks);
   const uniqueLinks = Array.from(linkSet);
 
-  console.log(`------- ${uniqueLinks.length} Links identified --------`);
+  program.log && console.log(`------- ${uniqueLinks.length} Links identified --------`);
   const dumpPath = path.resolve(__dirname, 'sitemap.json');
   fs.writeFileSync(dumpPath, JSON.stringify(convertToAuditorFormat(uniqueLinks), null, 2));
   console.log('Sitemap available at: ', dumpPath);
