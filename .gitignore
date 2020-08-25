@@ -9,3 +9,4 @@ package-lock.json
 sitemap.json
 a11y_violations.json
 example.png
+violations.log

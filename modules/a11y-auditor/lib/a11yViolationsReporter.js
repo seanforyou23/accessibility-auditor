@@ -25,6 +25,7 @@ const reportSummary = () => {
 };
 
 const logOutput = testPages => {
+  const output = [];
   if (testPages.length > 0) {
     testPages.forEach(page => {
       if (page.violations.length === 0) {
@@ -34,10 +35,9 @@ const logOutput = testPages => {
       page.violations.forEach(v => {
         violations.push(v);
       });
-      console.log(
-        `${logColors.yellow}%s${logColors.reset}`,
-        `${page.violations.length} error${page.violations.length === 1 ? '' : 's'} found in: ${page.page}`
-      );
+      const pageSummary = `${page.violations.length} error${page.violations.length === 1 ? '' : 's'} found in: ${page.page}`;
+      output.push(pageSummary);
+      console.log(`${logColors.yellow}%s${logColors.reset}`, pageSummary);
       const inlineMsg = `\n${page.violations
         .map(
           (v, idx) =>
@@ -45,14 +45,22 @@ const logOutput = testPages => {
         )
         .join('\n')}
       `;
+      output.push(inlineMsg);
       console.log(inlineMsg);
-      console.log('-------html violation instances-------');
+      const violationsHeader = '-------html violation instances-------';
+      output.push(violationsHeader);
+      console.log(violationsHeader);
       const nodesSummary = `\n${page.violations.map(v => v.nodes.map(el => el.html).join('\n')).join('\n')}`;
+      output.push(nodesSummary);
       console.log(nodesSummary, '\n');
     });
   } else {
-    console.log(`${logColors.green}%s${logColors.reset}`, 'No A11y violations found \n');
+    const noViolationsMsg = 'No A11y violations found \n';
+    output.push(noViolationsMsg);
+    console.log(`${logColors.green}%s${logColors.reset}`, noViolationsMsg);
   }
+
+  return output.join('\n');
 };
 
 const updateTravisCIStatus = (status, description) => {
@@ -102,7 +110,9 @@ const violationsReporter = (testPages, reportType) => {
         break;
       }
       default: {
-        logOutput(testPages);
+        const txtLog = logOutput(testPages);
+        const logLocation = path.resolve(__dirname, 'violations.log');
+        fs.writeFileSync(logLocation, txtLog);
         resolve();
       }
     }
