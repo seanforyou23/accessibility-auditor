@@ -29,7 +29,7 @@ const driver = new selenium.Builder()
 
 function runAxe(pagePath, res, rej) {
   return AxeBuilder(driver)
-    .withTags(['wcag2a', 'wcag2aa'])
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'section508'])
     .analyze()
     .then(results => {
 
@@ -69,7 +69,7 @@ const testPageA11y = testPage =>
     return (
       driver
         // wait for specific elements to become available
-        // .wait(selenium.until.elementLocated(selenium.By.css('#___gatsby > div'), 10000))
+        // .wait(selenium.until.elementLocated(selenium.By.css('#main-content-wrapper'), 10000))
         // allow time for the repaint/relow so styles are applied before we analyze the page
         .then(() => domReflowBuffer(testPage, resolve, reject))
         .then(({ path, res, rej }) => runAxe(path, res, rej))

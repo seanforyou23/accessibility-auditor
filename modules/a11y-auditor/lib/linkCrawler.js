@@ -33,7 +33,12 @@ let linksLeftToCrawl = []; // keep a counter of what remains to be crawled
 
     const page = await browser.newPage(); // fire up a new browser tab
     await page.setViewport({ width: 768, height: 1024 });
-    await page.goto(url); // navigate to the page
+    try {
+      await page.goto(url, { waitUntil: 'networkidle2' }); // navigate to the page
+    } catch(error) {
+      console.log('there was an error fetching page, ', url, error);
+    }
+
     program.log && console.log('Scraping: ', url, `-- uptime: ${Math.floor(process.uptime())} seconds`);
     const linksOnPage = await page.$$eval('a', anchorElements => anchorElements.map(a => a.href)); // all links, including ones we don't want
     const filteredLinksOnPage = linksOnPage
