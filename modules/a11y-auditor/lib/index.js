@@ -30,6 +30,8 @@ const driver = new selenium.Builder()
 function runAxe(pagePath, res, rej) {
   return AxeBuilder(driver)
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'section508'])
+    .disableRules('color-contrast')
+    // .withRules('color-contrast')
     .analyze()
     .then(results => {
 
@@ -50,7 +52,7 @@ function domReflowBuffer(testPage, res, rej) {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve({ path: testPage.path, res, rej });
-    }, 1000);
+    }, 250);
   });
 }
 
@@ -60,7 +62,7 @@ const testPageA11y = testPage =>
     const isExternalResource = testPage.path.startsWith('http');
 
     if (isExternalResource) {
-      console.log('testing public resource', testPage.path);
+      console.log('Testing public resource: ', testPage.path);
       driver.get(testPage.path);
     } else {
       driver.get(`${protocol}://${host}:${port}${testPage.path}`);
@@ -69,7 +71,7 @@ const testPageA11y = testPage =>
     return (
       driver
         // wait for specific elements to become available
-        // .wait(selenium.until.elementLocated(selenium.By.css('#main-content-wrapper'), 10000))
+        .wait(selenium.until.elementLocated(selenium.By.css('.page-loader-wrapper.loaded'), 10000))
         // allow time for the repaint/relow so styles are applied before we analyze the page
         .then(() => domReflowBuffer(testPage, resolve, reject))
         .then(({ path, res, rej }) => runAxe(path, res, rej))
@@ -84,6 +86,7 @@ if (process.env.CI) {
 }
 
 sitemap
+  .filter((page) => page.path.indexOf('/uploads/') !== -1 ? false : true) // filter static assets from uploads dir
   .reduce((prevPromise, nextPage) => prevPromise.then(() => testPageA11y(nextPage)), Promise.resolve())
   .then(_ => {
     driver.quit().then(() => {
