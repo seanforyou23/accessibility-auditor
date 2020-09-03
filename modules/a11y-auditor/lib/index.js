@@ -4,13 +4,11 @@ const AxeBuilder = require('axe-webdriverjs');
 
 const sitemap = require('./sitemap');
 const { a11yReporter } = require('./a11yViolationsReporter');
-const { errorsExceedThreshold } = require('./utils');
 const config = require('./config');
 
 const { protocol } = config;
 const { host } = config;
 const { port } = config;
-const { logColors } = config;
 const violatingPages = [];
 let chromeOptions = {};
 
@@ -71,7 +69,8 @@ const testPageA11y = testPage =>
     return (
       driver
         // wait for specific elements to become available
-        .wait(selenium.until.elementLocated(selenium.By.css('.page-loader-wrapper.loaded'), 10000))
+        .wait(selenium.until.elementLocated(selenium.By.css('.page-loader-wrapper.loaded'), 10000)) // WordPress apps
+        // .wait(selenium.until.elementLocated(selenium.By.css('.pf-c-page'), 10000)) // PatternFly apps
         // allow time for the repaint/relow so styles are applied before we analyze the page
         .then(() => domReflowBuffer(testPage, resolve, reject))
         .then(({ path, res, rej }) => runAxe(path, res, rej))
@@ -91,27 +90,6 @@ sitemap
   .then(_ => {
     driver.quit().then(() => {
       const totalViolationsPromise = a11yReporter.report(violatingPages);
-
-      totalViolationsPromise
-        .then(totalViolations => {
-          if (errorsExceedThreshold(totalViolations.length, config.toleranceThreshold)) {
-            console.log(`${logColors.red}%s${logColors.reset}`, `BUILD FAILURE: Too many accessibility violations`);
-            console.log(
-              `${logColors.red}%s${logColors.reset}`,
-              `Found ${totalViolations.length}, which exceeds our goal of less than ${config.toleranceThreshold} \n`
-            );
-            process.exit(1);
-          } else {
-            console.log(`${logColors.green}%s${logColors.reset}`, 'ACCESSIBILITY AUDIT PASSES \n');
-            console.log(
-              `${logColors.green}%s${logColors.reset}`,
-              `Found ${totalViolations.length}, which satisfies our goal of less than ${config.toleranceThreshold} \n`
-            );
-          }
-        })
-        .catch(error => {
-          throw new Error(error);
-        });
     });
   })
   .catch(error => {

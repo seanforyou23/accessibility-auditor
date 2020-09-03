@@ -7,8 +7,15 @@ const { errorsExceedThreshold, dec } = require('./utils');
 
 const violatingPages = [];
 const violations = [];
+const output = [];
 const { logColors } = config;
 const reportSummary = () => {
+  return [
+    '---------------------Accessibility Audit---------------------',
+    `  Found ${violatingPages.length} Page${violatingPages.length === 1 ? '' : 's'} with Accessibility Errors`,
+    `  ${violations.length} violation${violations.length === 1 ? '' : 's'} in total`,
+    '-------------------------------------------------------------\n'
+  ].join('\n')
   console.log(
     `${logColors.blue}%s${logColors.reset}`,
     '\n--------------Accessibility Audit--------------'
@@ -25,7 +32,6 @@ const reportSummary = () => {
 };
 
 const logOutput = testPages => {
-  const output = [];
   if (testPages.length > 0) {
     testPages.forEach(page => {
       if (page.violations.length === 0) {
@@ -51,7 +57,7 @@ const logOutput = testPages => {
       output.push(violationsHeader);
       console.log(violationsHeader);
       const nodesSummary = `\n${page.violations.map(v => v.nodes.map(el => el.html).join('\n')).join('\n')}`;
-      output.push(nodesSummary);
+      output.push(nodesSummary, '\n');
       console.log(nodesSummary, '\n');
     });
   } else {
@@ -111,8 +117,10 @@ const violationsReporter = (testPages, reportType) => {
       }
       default: {
         const txtLog = logOutput(testPages);
-        const logLocation = path.resolve(__dirname, 'violations.log');
-        fs.writeFileSync(logLocation, txtLog);
+        const finalReport = `${txtLog}\n${reportSummary()}`
+        const reportLocation = path.resolve(__dirname, 'violations.log');
+        fs.writeFileSync(reportLocation, finalReport);
+        console.log(`${logColors.yellow}%s${logColors.reset}`, `\nHuman readable audit log available at: ${reportLocation}\n`);
         resolve();
       }
     }
@@ -123,16 +131,29 @@ const violationsReporter = (testPages, reportType) => {
 
 module.exports = {
   a11yReporter: {
-    report: errors =>
-      violationsReporter(errors, 'default')
-        .then(() => {
-          reportSummary();
-        })
+    report: pageViolationsArray =>
+      violationsReporter(pageViolationsArray, 'default')
         .then(() => {
           const finalReportType = !process.env.CI ? 'writefile' : 'github-status-reporter';
-          return violationsReporter(errors, finalReportType);
+          return violationsReporter(pageViolationsArray, finalReportType);
         })
-        .then(() => violations),
+        .then(() => {
+          if (errorsExceedThreshold(violations.length, config.toleranceThreshold)) {
+            console.log(`${logColors.red}%s${logColors.reset}`, `BUILD FAILURE: Too many accessibility violations`);
+            console.log(
+              `${logColors.red}%s${logColors.reset}`,
+              `Found ${violations.length}, which exceeds our goal of less than ${config.toleranceThreshold} \n`
+            );
+            process.exit(1);
+          } else {
+            console.log(`${logColors.green}%s${logColors.reset}`, 'ACCESSIBILITY AUDIT PASSES \n');
+            console.log(
+              `${logColors.green}%s${logColors.reset}`,
+              `Found ${violations.length}, which satisfies our goal of less than ${config.toleranceThreshold} \n`
+            );
+          }
+          return violations
+        }),
     updateTravisCIStatus
   }
 };
